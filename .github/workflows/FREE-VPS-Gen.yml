@@ -8,7 +8,7 @@ on:
 jobs:
   start-vps:
     runs-on: ubuntu-latest
-    timeout-minutes: 999999999999999999999999  # 999999999999999999999999 hours max
+    timeout-minutes: 720  # 12 hours max
  
     steps:
       - name: ⬇️ Checkout
@@ -50,4 +50,4 @@ jobs:
       - name: ⏳ Keep session alive
         run: |
           echo "⏳ Keeping session alive for Unlimited hours..."
-          sleep $((999999999999999999999999 * 999999999999999999999999))
+          sleep $(720 * 12))
